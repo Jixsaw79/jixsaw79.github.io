@@ -1,6 +1,6 @@
 # Jixsaw — Cybersecurity Portfolio
 
-Live site: https://jixsaw079.github.io/
+Live site: https://jixsaw79.github.io/
 
 A free, static GitHub Pages portfolio documenting Shadman Ibtesham (Jixsaw)'s cybersecurity learning journey, projects, CTF participation, achievements, and Deadweight Squad.
 
