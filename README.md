@@ -2,7 +2,7 @@
 
 Live site: https://jixsaw79.github.io/
 
-A free, static GitHub Pages portfolio documenting Shadman Ibtesham (Jixsaw)'s cybersecurity learning journey, projects, CTF participation, achievements, and Deadweight Squad.
+A free, static GitHub Pages portfolio documenting Shadman Ibtesham (Jixsaw)'s cybersecurity learning journey, projects, CTF participation, achievements, and Z-Society.
 
 ## Site map
 
@@ -10,7 +10,7 @@ A free, static GitHub Pages portfolio documenting Shadman Ibtesham (Jixsaw)'s cy
 - `projects/bank-management-system/index.html` — project case study and planned reliability work
 - `writeups/index.html` — field-notes archive and publication standards
 - `achievements/index.html` — certificates and digital badge archive
-- `squad/index.html` — Deadweight Squad team page
+- `squad/index.html` — Z-Society team page
 - `style.css` — shared visual system and responsive styles
 - `404.html` — friendly missing-page experience
 - `robots.txt` and `sitemap.xml` — basic search-crawler guidance
