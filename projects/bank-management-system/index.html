@@ -1,1 +1,144 @@
-PLACEHOLDER
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0912">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; child-src 'none'; media-src 'none'; worker-src 'none'; connect-src 'none'; manifest-src 'none'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; style-src-attr 'none'; font-src 'self' https://fonts.gstatic.com; upgrade-insecure-requests">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="no-referrer">
+<title>jixsaw@projects:~$ Bank Management System</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230b0912'/%3E%3Cpath d='M24 25h52M24 50h34M24 75h52' stroke='%238ea0ff' stroke-width='7'/%3E%3C/svg%3E">
+<meta name="description" content="A single-file C Bank Management System featuring account management, transactions, loan tracking, input validation, and persistent text-file storage.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bank Management System — Jixsaw">
+<meta property="og:description" content="Explore a single-file C banking simulation with account management, transaction checks, and persistent file storage.">
+<meta property="og:url" content="https://jixsaw79.github.io/projects/bank-management-system/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css?v=20261024-cursor">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="/" aria-label="Jixsaw home">
+      <span class="mark">JX</span>
+      <span class="prompt-user">jixsaw</span><span class="prompt-host">@projects</span><span class="wordmark-tail">:~$</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="/#profile">about</a>
+      <a href="/#skills">skills</a>
+      <a href="/#operations">activity</a>
+      <a href="/projects/" aria-current="page">projects</a>
+      <a href="/writeups/">notes</a>
+      <a href="/achievements/">certs</a>
+      <a href="/squad/">squad <span class="nav-arrow">↗</span></a>
+      <a href="/#contact">contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <p class="access-granted" aria-label="root access granted">root access granted<span class="cursor" aria-hidden="true"></span></p>
+  <section class="page-intro">
+    <p class="page-kicker">$ cat projects/bank-management-system/README.md</p>
+    <h1>Bank Management<br><span class="accent">System.</span></h1>
+    <p>A menu-driven Bank Management System built in C as a university learning project. The implementation stays in one <code>.c</code> source file, saves account records between runs, and keeps timestamped transaction history in a separate text file.</p>
+    <div class="tag-list compact"><span>C</span><span>Structures & functions</span><span>File I/O</span><span>Input validation</span><span>Persistent storage</span><span>Transaction history</span></div>
+    <div class="hero-actions">
+      <a class="button button-primary" href="https://github.com/Jixsaw79/Bank-Management-System" target="_blank" rel="noopener noreferrer">view repository ↗</a>
+      <a class="button" href="https://github.com/Jixsaw79/Bank-Management-System/blob/main/README.md" target="_blank" rel="noopener noreferrer">read README ↗</a>
+      <a class="button" href="https://github.com/Jixsaw79/Bank-Management-System/blob/main/Bank-Management-System.c" target="_blank" rel="noopener noreferrer">read C source ↗</a>
+      <a class="button" href="https://github.com/Jixsaw79/Bank-Management-System/blob/main/docs/TESTING.md" target="_blank" rel="noopener noreferrer">view manual QA ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label"><span class="cmd">$ cat</span> <span class="path">scope.txt</span></div>
+    <div class="term-window">
+      <div class="term-titlebar">
+        <div class="term-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+        <div class="term-title">scope.txt</div>
+      </div>
+      <div class="term-body">
+        <div class="prompt">$ head -n 20 scope.txt</div>
+        <div class="out">
+          <strong class="inline-text">Baseline</strong><br>
+          Menu-driven banking simulation for practising C and function-based structure.<br><br>
+          • Create accounts and automatically assign account numbers<br>
+          • View accounts and check balances<br>
+          • Deposit and withdraw with basic amount checks<br>
+          • Transfer funds between different accounts<br>
+          • Record loans and repay outstanding amounts<br>
+          • Reject invalid numeric input and unknown account numbers<br>
+          • Save records to <code>accounts.txt</code> and reload them at startup<br>
+          • Record timestamped deposits, withdrawals, transfers, loans, and repayments in <code>transactions.txt</code><br>
+          • View transaction history for a specific account, including amounts and resulting balances<br><br>
+          <em class="dim-text">Educational simulation — not real banking software.</em>
+        </div>
+        <div class="prompt">$ cat implementation_notes.txt</div>
+        <div class="out">
+          • Storage uses a text file in the program's current working directory.<br>
+          • Keep <code>accounts.txt</code> and <code>transactions.txt</code> in the program's working directory between runs.<br>
+          • Account names should not contain the <code>|</code> separator used by the file format.<br>
+          • The project supports up to 100 accounts and uses <code>float</code> for money values.<br>
+          • Loan approval is simulated; no real bank or database is connected.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="example-output">
+    <div class="section-label"><span class="cmd">$ ./bank-management-system</span> <span class="path">example_output.txt</span></div>
+    <div class="term-window">
+      <div class="term-titlebar"><div class="term-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div><div class="term-title">console — sample session</div></div>
+      <div class="term-body">
+        <p class="muted">Example of the program's startup menu and clean exit when no saved account file is available. Your actual output changes based on the saved data and choices.</p>
+        <pre class="source-code"><code>No saved account data loaded. Starting with an empty account list.
+
+==== BANK MANAGEMENT SYSTEM ====
+1. Create Account
+2. View All Accounts
+3. Deposit Money
+4. Withdraw Money
+5. Check Balance
+6. Transfer Money
+7. Apply For Loan
+8. Repay Loan
+9. View Transaction History
+0. Exit
+Enter choice: 0
+Thank you for using the Bank Management System.</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="source-code">
+    <div class="section-label"><span class="cmd">$ cat</span> <span class="path">Bank-Management-System.c</span></div>
+    <div class="section-heading"><h2>Full C source code</h2><p>The complete source is available on GitHub. Open the repository links above to read the full program, README, and manual QA notes.</p></div>
+    <div class="term-window">
+      <div class="term-titlebar"><div class="term-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div><div class="term-title">source links</div></div>
+      <div class="term-body">
+        <div class="prompt">$ ls github.com/Jixsaw79/Bank-Management-System/</div>
+        <div class="out">
+          <a class="card-action" href="https://github.com/Jixsaw79/Bank-Management-System/blob/main/Bank-Management-System.c" target="_blank" rel="noopener noreferrer">Bank-Management-System.c ↗</a><br>
+          <a class="card-action" href="https://github.com/Jixsaw79/Bank-Management-System/blob/main/README.md" target="_blank" rel="noopener noreferrer">README.md ↗</a><br>
+          <a class="card-action" href="https://github.com/Jixsaw79/Bank-Management-System/blob/main/docs/TESTING.md" target="_blank" rel="noopener noreferrer">docs/TESTING.md ↗</a>
+        </div>
+        <p class="muted">Source is kept in the public repository so this page stays lighter and always matches the latest committed code.</p>
+      </div>
+    </div>
+  </section>
+
+  <a class="back-link" href="/projects/">$ cd ../</a>
+</main>
+<footer>
+  <div class="wrap footer-inner">
+    <a class="wordmark" href="/"><span class="mark">JX</span> jixsaw@projects</a>
+    <span>exit 0 · 2026</span>
+    <a href="#main">cd ~</a>
+  </div>
+</footer>
+</body>
+</html>
