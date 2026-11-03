@@ -2,8 +2,8 @@
 
 ## Scope
 
-This policy covers the public static website at https://jixsaw079.github.io/ and this site's source repository:
-https://github.com/jixsaw079/jixsaw079.github.io
+This policy covers the public static website at https://jixsaw79.github.io/ and this site's source repository:
+https://github.com/Jixsaw79/jixsaw79.github.io
 
 ## Reporting a vulnerability
 
