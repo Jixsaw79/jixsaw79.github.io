@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jixsaw079.github.io/sitemap.xml
+Sitemap: https://jixsaw79.github.io/sitemap.xml
