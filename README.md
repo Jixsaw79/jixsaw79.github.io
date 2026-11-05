@@ -1,6 +1,6 @@
 # Jixsaw — Cybersecurity Portfolio
 
-Live site: https://jixsaw79.github.io/
+Live site: https://jixsaw079.github.io/
 
 A free, static GitHub Pages portfolio documenting Shadman Ibtesham (Jixsaw)'s cybersecurity learning journey, projects, CTF participation, achievements, and Z-Society.
 
@@ -10,7 +10,6 @@ A free, static GitHub Pages portfolio documenting Shadman Ibtesham (Jixsaw)'s cy
 - `projects/bank-management-system/index.html` — project case study and planned reliability work
 - `writeups/index.html` — field-notes archive and publication standards
 - `achievements/index.html` — certificates and digital badge archive
-- `squad/index.html` — Z-Society team page
 - `style.css` — shared visual system and responsive styles
 - `404.html` — friendly missing-page experience
 - `robots.txt` and `sitemap.xml` — basic search-crawler guidance
@@ -25,12 +24,12 @@ This is a **zero-JavaScript** static site. The site uses a restrictive meta-deli
 - **Content-Security-Policy** (strict):
   - `script-src 'none'` — no JavaScript of any kind
   - `object-src 'none'`, `frame-src 'none'`, `media-src 'none'`, `worker-src 'none'`, `connect-src 'none'`, `manifest-src 'none'`
-  - `base-uri 'self'`, `form-action 'self'`
+  - `base-uri 'self'`, `form-action 'none'`
   - Images limited to `'self'` + `data:`
   - Styles and fonts narrowly allow Google Fonts only
   - `upgrade-insecure-requests`
-- **`X-Content-Type-Options: nosniff`** is documented as a desired HTTP header, but cannot be enforced through a meta tag; do not count it as active protection on GitHub Pages.
-- **Referrer policy** via the supported `referrer` meta element: `strict-origin-when-cross-origin`
+- `X-Content-Type-Options: nosniff` must be configured as an HTTP response header; a meta element cannot enforce it, so do not count it as active protection on GitHub Pages.
+- **Referrer policy** via the supported `referrer` meta element: `no-referrer`
 - External links use `rel="noopener noreferrer"`
 - No forms, no cookies, no third-party analytics, no tracking scripts
 - `security.txt` present for responsible disclosure
