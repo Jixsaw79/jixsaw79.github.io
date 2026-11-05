@@ -6,7 +6,8 @@ A free, static GitHub Pages portfolio documenting Shadman Ibtesham (Jixsaw)'s cy
 
 ## Site map
 
-- `index.html` — portfolio home, profile, activity, working method, projects, roadmap, and contact links
+- `index.html` — portfolio home, profile, activity, projects, roadmap, and contact links
+- `projects/index.html` — project directory and project links
 - `projects/bank-management-system/index.html` — project case study and planned reliability work
 - `writeups/index.html` — field-notes archive and publication standards
 - `achievements/index.html` — certificates and digital badge archive
